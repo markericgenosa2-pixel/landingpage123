@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSU MCEST Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        /*navigationbar*/
+
+        nav {
+            background: #002147;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        body {
+            background-image: url('msupic3.jpg');
+            /* your image URL */
+            background-size: cover;
+            /* makes image cover entire screen */
+            background-repeat: no-repeat;
+            /* prevents tiling */
+            background-position: bottom;
+            /* centers image */
+            background-attachment: fixed;
+            /* keeps image fixed when scrolling */
+            color: white;
+            /* optional: makes text readable */
+
+        }
+
+        .hero {
+            background: url("logoMCEST.png");
+            background-position: center;
+            background-repeat: no-repeat;
+
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+            color: white;
+            font-size: 30px;
+
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            background: #ffcc00;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        #about p {
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            color: red;
+            font-size: 30px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #002147;
+        }
+
+        p {
+            color: black;
+            font-size: large;
+
+        }
+
+        /* PROGRAMS */
+
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .programs h3 {
+            color: red;
+        }
+
+        .card1 p,
+        .card2 p,
+        .card3 p,
+        .card4 p {
+            color: maroon;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+
+
+
+        }
+
+        .card1 {
+            background-color: transparent;
+            background-image: url('comscilogo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200px;
+
+            background-position: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card2 {
+            background-color: transparent;
+            background-image: url('hmlogo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card3 {
+            background-color: transparent;
+            background-image: url('DITlogo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card4 {
+            background-color: transparent;
+            background-image: url('DHESSlogo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        .card5 {
+            background-color: transparent;
+            background-image:
+                url('DETlogo.png'),
+                url('DNSMlogo.png'),
+                url('DSWlogo.png');
+
+            background-repeat: no-repeat;
+            background-position:
+                45% 50%,
+                50% 50%,
+                55% 50%;
+            background-size: 200px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* FEATURES */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+        }
+
+        /* GALLERY */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .gallery1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery1 img {
+            width: 100%;
+            border-radius: 10px;
+            height: 80%;
+        }
+
+        /* TESTIMONIAL */
+
+        .testimonial {
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* CONTACT */
+
+        form {
+            width: 20px;
+            margin: auto;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 12px;
+            background: #002147;
+            color: white;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #002147;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: wheat;
+        }
+
+        #admissions p {
+            color: black;
+            font-size: 25px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <h3>MSU-MCEST</h3>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build Your Future With Us</h1>
+            <p>Quality Education and Career-Focused Programs.</p>
+            <a href="https://msumcest.edu.ph/" class="btn">Enroll Now</a>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+        <div class="container">
+            <h2>About The University</h2>
+            <p>
+                Mindanao State University - Maigo College of Education, Science, and Technology
+                is a Diverse-Cultured college institution located at the heart of Lanao Del Norte. Providing top quality
+                education to students
+                in Northern Mindanao. Offering 20 College Programs such as BS Computer Science, BS Hospitality
+                management, BS Social Work, and many more.
+                Producing Top Notchers in the Licensure Examinations for Teachers (LET), in 2022, 2024, and 2025.
+                MSU-MCEST surely provides quality education and unique college experince, having multiple cultures,
+                religions, and ideologies
+                united in one school with shared goals.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROGRAMS -->
+
+    <section id="programs">
+        <div class="container">
+            <h2>Our Programs</h2>
+
+            <div class="programs">
+
+                <div class="card1">
+                    <h3>Computer Science</h3>
+                    <br> <br> <br><br>
+                    <p>Learn programming, AI, and software development.</p>
+                </div>
+
+                <div class="card2">
+                    <h3>Hospitality Management</h3>
+                    <br> <br> <br><br>
+                    <p>Develop management skills in business,
+                        and experience in high-quality services.</p>
+                </div>
+
+                <div class="card3">
+                    <h3>Industrial Technology</h3>
+                    <br> <br> <br><br>
+                    <p>Machine Works, Engineering Basics, and Maintenance.</p>
+                </div>
+
+                <div class="card4">
+                    <h3>Education</h3>
+                    <br> <br> <br> <br> <br>
+                    <p>Prepare for a career in teaching and
+                        be the next top notcher.</p>
+
+
+
+                </div>
+
+
+            </div>
+            <div class="card5">
+                <h3>And Many More</h3>
+                <br> <br> <br> <br><br>
+
+
+
+
+
+    </section>
+
+    <!-- WHY CHOOSE US -->
+
+    <section>
+        <div class="container">
+            <h2>Why Choose Us</h2>
+
+            <div class="features">
+
+                <div class="card">
+                    <h3>Expert Faculty</h3>
+                    <p>Learn from experienced educators and professionals.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Modern Facilities</h3>
+                    <p>Advanced labs, libraries, and smart classrooms.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Career Opportunities</h3>
+                    <p>Internships and strong industry partnerships.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPUS LIFE -->
+
+    <section>
+        <div class="container">
+            <h2>Campus Life</h2>
+
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
+                <img src="crim.jpg">
+                <img src="msu2.jpg">
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container1">
+
+
+            <div class="gallery1">
+                <img src="msu3.jpg">
+                <img src="msu4.jpg">
+                <img src="msu5.jpg">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+
+    <section>
+        <div class="container">
+            <h2>Student Testimonial</h2>
+
+            <div class="testimonial">
+                <p>
+                    "Studying here helped me build the skills and confidence
+                    needed for my career."
+                </p>
+                <strong>— Eric McCartney</strong>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ADMISSIONS -->
+
+    <section id="admissions">
+        <div class="container">
+            <h2>How to Apply</h2>
+            <p>
+                1. Submit your application<br>
+                2. Upload required documents<br>
+                3. Wait for admission confirmation<br>
+                4. Enroll and start your journey
+            </p>
+            <br>
+            <a href="https://msumcest.edu.ph/" class="btn">Start Application</a>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© Genosa Mark Eric H.
+            (BSCS 2A)
+        </p>
+    </footer>
+
+</body>
+
+</html>
